@@ -7,9 +7,9 @@ import com.zipcodewilmington.froilansfarm.Crops.TomatoPlant;
 import com.zipcodewilmington.froilansfarm.FarmStuff.Farm;
 import com.zipcodewilmington.froilansfarm.Field.CropRow;
 
-public class Sunday extends DayOfWeek{
+public class Sunday extends DayOfWeek {
 
-    public static void run(Farm farm){
+    public static void run(Farm farm) {
         breakfast(farm);
         morning(farm);
         lunch(farm);
@@ -17,7 +17,7 @@ public class Sunday extends DayOfWeek{
         dinner(farm);
     }
 
-    public static void afternoon(Farm farm){
+    public static void afternoon(Farm farm) {
         plantCropRow(farm, new CornStalk());
         plantCropRow(farm, new TomatoPlant());
         plantCropRow(farm, new SoybeanPlant());
@@ -30,14 +30,12 @@ public class Sunday extends DayOfWeek{
             for (int i = 0; i < 200; i++) {
                 cropRow.add(new CornStalk());
             }
-        }
-        else if (crop instanceof TomatoPlant) {
+        } else if (crop instanceof TomatoPlant) {
             cropRow = farm.getField().get().get(1);
             for (int i = 0; i < 80; i++) {
                 cropRow.add(new TomatoPlant());
             }
-        }
-        else {
+        } else {
             cropRow = farm.getField().get().get(2);
             for (int i = 0; i < 500; i++) {
                 cropRow.add(new SoybeanPlant());
